@@ -423,22 +423,4 @@ a:hover {
     display: flex;
     align-items: flex-end;
 }
-/* Floating Visitor Counter Button */
-.visitor-counter {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ffc107;
-    color: #000;
-    padding: 10px 15px;
-    border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 1rem;
-    z-index: 1000;
-    text-align: center;
-}
-
-.visitor-counter span {
-    font-weight: bold;
-}
 
