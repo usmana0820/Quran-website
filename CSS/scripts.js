@@ -50,16 +50,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 document.addEventListener("DOMContentLoaded", function() {
-    // Check if the visitor count is already stored in localStorage
-    if (localStorage.getItem("visitorCount")) {
-        // Increment the count by 1
-        let count = parseInt(localStorage.getItem("visitorCount"));
-        count += 1;
-        localStorage.setItem("visitorCount", count);
-        document.getElementById("visitor-count").innerText = count;
+    // Generate a unique ID for the visitor if not already present
+    function generateUniqueID() {
+        return 'xxxxxx'.replace(/[xy]/g, function(c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+
+    if (!localStorage.getItem("visitorID")) {
+        // Generate and store a unique visitor ID
+        let uniqueID = generateUniqueID();
+        localStorage.setItem("visitorID", uniqueID);
+
+        // Check if the visitor count is already stored in localStorage
+        if (localStorage.getItem("visitorCount")) {
+            // Increment the count by 1
+            let count = parseInt(localStorage.getItem("visitorCount"));
+            count += 1;
+            localStorage.setItem("visitorCount", count);
+            document.getElementById("visitor-count").innerText = count;
+        } else {
+            // If no count is stored, initialize it to 1
+            localStorage.setItem("visitorCount", 1);
+            document.getElementById("visitor-count").innerText = 1;
+        }
     } else {
-        // If no count is stored, initialize it to 1
-        localStorage.setItem("visitorCount", 1);
-        document.getElementById("visitor-count").innerText = 1;
+        // If visitorID exists, just display the current count
+        document.getElementById("visitor-count").innerText = localStorage.getItem("visitorCount");
     }
 });
+

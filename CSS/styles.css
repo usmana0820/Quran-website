@@ -428,10 +428,10 @@ a:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffc107;
+    background-color: #ffc10779;
     color: #000;
     padding: 10px 15px;
-    border-radius: 50px;
+    border-radius: 500%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 1rem;
     z-index: 1000;
