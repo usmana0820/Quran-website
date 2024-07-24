@@ -95,7 +95,8 @@ a:hover {
 }
 
 .navbar-collapse {
-    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
 }
 
 .navbar-nav .nav-link i {
