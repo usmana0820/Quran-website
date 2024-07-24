@@ -246,12 +246,73 @@
     }
 </script>
 
+<script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+    apiKey: "AIzaSyBw3WRpsWu7oxj1PSwMhWtWzvpUXnI38kg",
+    authDomain: "quranwebiste.firebaseapp.com",
+    projectId: "quranwebiste",
+    storageBucket: "quranwebiste.appspot.com",
+    messagingSenderId: "315842700053",
+    appId: "1:315842700053:web:fc7c92abd2d9eb4e40bf1c",
+    measurementId: "G-L8Z3GEWTDX"
+};
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const db = firebase.database(); // Use Firestore if preferred
+
+        // Generate a unique ID for the visitor if not already present
+        function generateUniqueID() {
+            return 'xxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        // Check for existing visitor ID
+        const visitorID = localStorage.getItem("visitorID");
+        if (!visitorID) {
+            // Generate and store a new unique visitor ID
+            const uniqueID = generateUniqueID();
+            localStorage.setItem("visitorID", uniqueID);
+
+            // Increment the total visitor count in Firebase
+            db.ref('visitorCount').transaction(function(currentCount) {
+                return (currentCount || 0) + 1;
+            });
+
+            // Update the counter in the UI
+            db.ref('visitorCount').once('value').then(function(snapshot) {
+                document.getElementById("visitor-count").innerText = snapshot.val();
+            });
+        } else {
+            // Retrieve and display the current visitor count from Firebase
+            db.ref('visitorCount').once('value').then(function(snapshot) {
+                document.getElementById("visitor-count").innerText = snapshot.val();
+            });
+        }
+    });
+</script>
+
 
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+    <!-- Firebase Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"></script>
+
+
     <script src="./CSS/scripts.js"></script>
 </body>
 </html>

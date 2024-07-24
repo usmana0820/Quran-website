@@ -428,10 +428,10 @@ a:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffc10779;
+    background-color: #ffc107;
     color: #000;
     padding: 10px 15px;
-    border-radius: 500%;
+    border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 1rem;
     z-index: 1000;
@@ -441,3 +441,4 @@ a:hover {
 .visitor-counter span {
     font-weight: bold;
 }
+
