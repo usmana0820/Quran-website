@@ -20,13 +20,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item" style="margin-right: 9px;">
                     <a class="nav-link" href="https://www.facebook.com/profile.php?id=100064027953689&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="margin-right: 9px;">
                     <a class="nav-link" href="#about">About Us</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="margin-right: 9px;">
                     <a class="nav-link" href="#courses">Courses</a>
                 </li>
                 <li class="nav-item" style="margin-right: 45px;">
@@ -75,7 +75,7 @@
 
     <!-- Courses Section -->
     <section id="courses" class="content-section">
-        <h1 style="text-align: center; margin-top: 100px;">Courses</h1>
+        <h1 style="text-align: center; margin-top: 50px;">Courses</h1>
         <div class="container">
             <!-- Div 1: Quran Recitation -->
             <div class="custom-div course fade-up" style="margin-top: 0%;">
@@ -217,6 +217,29 @@
         </div>
     </div>
 </footer>
+
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+<script>
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123) { // F12 key
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { // Ctrl+Shift+C
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Ctrl+Shift+J
+            return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
+            return false;
+        }
+    }
+</script>
 
 
 
