@@ -47,6 +47,8 @@ a:hover {
     align-items: center;
     text-align: center;
     color: white;
+    transition: opacity 0.3s ease-in-out; /* Smooth fade transition */
+    opacity: 1; /* Start fully visible */
 }
 
 #splash h1 {

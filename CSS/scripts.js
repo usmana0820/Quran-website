@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Change splash screen image every 3 seconds
-    setInterval(changeSplashImage, 3000);
+    setInterval(changeSplashImage, 4000);
 
     // Hover effect for splash screen
     splashScreen.addEventListener('mouseenter', function() {
-        splashScreen.style.transition = 'background-image 0.3s ease-in-out'; // Faster transition on hover
+        splashScreen.style.transition = 'background-image 1.1s ease-in-out'; // Faster transition on hover
     });
 
     splashScreen.addEventListener('mouseleave', function() {
