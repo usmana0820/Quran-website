@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Change splash screen image every 3 seconds
-    setInterval(changeSplashImage, 8000);
+    setInterval(changeSplashImage, 3000);
 
     // Hover effect for splash screen
     splashScreen.addEventListener('mouseenter', function() {
