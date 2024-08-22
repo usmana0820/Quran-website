@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const splashScreen = document.getElementById('splash');
 
     function changeSplashImage() {
-        splashScreen.style.transition = 'background-image 1s ease-in-out'; // Smooth transition
+        splashScreen.style.transition = 'background-image 4s ease-in-out'; // Smooth transition
         splashScreen.style.backgroundImage = `url('${splashImages[currentImageIndex]}')`;
         currentImageIndex = (currentImageIndex + 1) % splashImages.length;
     }
@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Hover effect for splash screen
     splashScreen.addEventListener('mouseenter', function() {
-        splashScreen.style.transition = 'background-image 1.1s ease-in-out'; // Faster transition on hover
+        splashScreen.style.transition = 'background-image 5.1s ease-in-out'; // Faster transition on hover
     });
 
     splashScreen.addEventListener('mouseleave', function() {
-        splashScreen.style.transition = 'background-image 1s ease-in-out'; // Restore original transition on mouse leave
+        splashScreen.style.transition = 'background-image 5s ease-in-out'; // Restore original transition on mouse leave
     });
 
     // Close collapsed navbar when clicking outside
