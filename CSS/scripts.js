@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         splashScreen.style.transition = 'background-image 5.1s ease-in-out'; // Faster transition on hover
     });
 
-    splashScreen.addEventListener('mouseleave', function() {
+    splashScreen.addEventListener('mouseenter', function() {
         splashScreen.style.transition = 'background-image 5s ease-in-out'; // Restore original transition on mouse leave
     });
 

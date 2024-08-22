@@ -39,7 +39,7 @@ a:hover {
 /* Splash Screen */
 #splash {
     height: 100vh;
-    background-image: url('../images/splash\ 15.jpg'); 
+    background-image: url('../images/splash 15.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
