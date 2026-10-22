@@ -1,261 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Noor Al-Banat </title>
-        <link rel="stylesheet" href="./CSS/styles.css">
-        <link rel="stylesheet" href="animations.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="icon" href="images/logo.png" type="image/x-icon"> <!-- Favicon link -->
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123d32">
+    <meta name="description" content="Explore thoughtful online Quran and Islamic studies classes for girls at Noor Al-Banat. Learn at your own pace with personal guidance.">
+    <title>Noor Al-Banat | Learn Quran with Confidence</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
 <body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="Noor Al-Banat home">
+                <img src="images/logo.png" alt="" class="brand-logo">
+                <span>Noor <span class="brand-accent">Al-Banat</span></span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-menu" id="site-menu">
+                <a href="#about">About us</a>
+                <a href="#courses">Our courses</a>
+                <a href="#contact">Contact</a>
+                <a class="nav-cta" href="https://wa.me/923407677470" target="_blank" rel="noopener noreferrer">Start learning <span aria-hidden="true">↗</span></a>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Noor Al-Banat Logo" class="navbar-logo">Noor Al-Banat</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://wa.me/923407677470" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Whatsup
-                    </a>
-                </li>
-                <li class="nav-item" style="margin-right: 13px;">
-                    <a class="nav-link" href="#about">
-                        <i class="fas fa-info-circle"></i> About Us
-                    </a>
-                </li>
-                <li class="nav-item" style="margin-right: 13px;">
-                    <a class="nav-link" href="#contact">
-                        <i class="fas fa-envelope"></i> Contact
-                    </a>
-                </li>
-                <li class="nav-item" style="margin-right: 19px;">
-                    <a class="nav-link" href="#courses">
-                        <i class="fas fa-book"></i> Courses
-                    </a>
-                </li>
-                
-            </ul>
-            
-        </div>
-    </nav>
-    <!-- Splash Screen -->
-    <section id="splash" style="background-color: #000; background-image: '../images/splash 15.jpg';">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 offset-md-3 text-center">
-                    <h1>Welcome to Noor Al-Banat</h1>
-                    <p>We provide comprehensive courses to enrich your understanding and practice of Islam.</p>
+    <main>
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="hero-shade"></div>
+            <div class="hero-content">
+                <span class="eyebrow hero-eyebrow"><span class="eyebrow-mark"></span> A welcoming space to grow in faith</span>
+                <h1 id="hero-title">Let the light of the <em>Quran</em> guide your journey.</h1>
+                <p>Meaningful Quran and Islamic studies classes for girls—taught with care, patience, and a personal touch.</p>
+                <div class="hero-actions">
+                    <a class="button button-gold" href="https://wa.me/923407677470" target="_blank" rel="noopener noreferrer">Explore classes <span aria-hidden="true">↗</span></a>
+                    <a class="button button-outline" href="#about">Discover our approach</a>
                 </div>
+                <div class="hero-note"><span class="note-line"></span> Learn at your pace. Grow with confidence.</div>
             </div>
-        </div>
-    </section>
+            <a class="scroll-cue" href="#about" aria-label="Scroll to learn more"><span></span> Scroll to explore</a>
+            <div class="hero-index" aria-hidden="true"><span>01</span><i></i> 03</div>
+        </section>
 
-  <!-- About Section -->
-<section id="about" >
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 order-md-1 animated-div">
-                <div class="image-container">
-                    <img src="images/vision.png" alt="Vision" class="img-fluid rounded-image">
+        <section class="intro section-wrap" id="about">
+            <div class="intro-art">
+                <div class="art-frame">
+                    <img src="images/vision.png" alt="A peaceful space for learning and reflection">
                 </div>
+                <div class="art-caption"><span class="caption-symbol" aria-hidden="true">✦</span><span>Knowledge that nurtures the heart</span></div>
+                <span class="art-orbit" aria-hidden="true"></span>
             </div>
-            <div class="col-md-6 order-md-2">
-                <div class="about-text">
-                    <h2 class="text-center">About Noor Al-Banat</h2>
-                    <h3 class="text-center">Our Vision</h3>
-                    <p>To educate and empower young girls through Islamic knowledge, fostering a deeper connection with their faith.</p>
-                    <h3 class="text-center">Our Mission</h3>
-                    <p>Offering structured courses that cover Quranic recitation, Tajweed, Hifz, Namaz, Ahadees, Noorani Qaida, Masnoon Duas, Six Kalmas, and Tafseer of Quran.</p>
-                    <h3 class="text-center">Our Values</h3>
-                    <p>We are dedicated to providing a supportive and inclusive environment for all students, encouraging growth and spiritual development.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Courses Section -->
-    <section id="courses">
-        <h1 style="text-align: center; margin-top: 50px;">Courses</h1>
-        <div class="container">
-            <!-- Div 1: Quran Recitation -->
-            <div class="custom-div course fade-up" style="margin-top: 0%;">
-                <div class="image-div">
-                    <img src="images/recitation.png" alt="Quran Recitation">
-                </div>
-                <div class="text-div">
-                    <h2>Quran Recitation - تلاوة القرآن</h2>
-                    <p>Learn the proper way to recite the Quran with correct pronunciation and intonation.</p>
-                </div>
-            </div>
-    
-            <!-- Div 2: Tajweed -->
-            <div class="custom-div course fade-down">
-                <div class="image-div">
-                    <img src="images/tajweed.png" alt="Tajweed">
-                </div>
-                <div class="text-div">
-                    <h2>Tajweed - تجويد</h2>
-                    <p>Enhance your Quran recitation with accurate rules and techniques.</p>
-                </div>
-            </div>
-    
-            <!-- Div 3: Hifz -->
-            <div class="custom-div course fade-left">
-                <div class="image-div">
-                    <img src="images/hifz.png" alt="Hifz">
-                </div>
-                <div class="text-div">
-                    <h2>Hifz - حفظ</h2>
-                    <p>Memorize the Quran efficiently with our structured Hifz program tailored for girls.</p>
-                </div>
-            </div>
-    
-            <!-- Div 4: Complete Namaz -->
-            <div class="custom-div course fade-right">
-                <div class="image-div">
-                    <img src="images/namaz.png" alt="Complete Namaz">
-                </div>
-                <div class="text-div">
-                    <h2>Complete Namaz - صلاة كاملة</h2>
-                    <p>Learn the complete method of performing Salah, including all the essential prayers and movements.</p>
-                </div>
-            </div>
-    
-            <!-- Div 5: Ahadees -->
-            <div class="custom-div course fade-up">
-                <div class="image-div">
-                    <img src="images/hadees.png" alt="Ahadees">
-                </div>
-                <div class="text-div">
-                    <h2>Ahadees - الأحاديث</h2>
-                    <p>Study the sayings and traditions of the Prophet Muhammad (PBUH) and incorporate them into your life.</p>
-                </div>
-            </div>
-    
-            <!-- Div 6: Noorani Qaida -->
-            <div class="custom-div course fade-down">
-                <div class="image-div">
-                    <img src="images/noorani.png" alt="Noorani Qaida">
-                </div>
-                <div class="text-div">
-                    <h2>Noorani Qaida - نوراني قاعدة</h2>
-                    <p>Start your Quranic journey with Noorani Qaida, perfect for beginners to learn the Arabic alphabet and pronunciation.</p>
-                </div>
-            </div>
-    
-            <!-- Div 7: Masnoon Duas -->
-            <div class="custom-div course fade-left">
-                <div class="image-div">
-                    <img src="images/masnoon.png" alt="Masnoon Duas">
-                </div>
-                <div class="text-div">
-                    <h2>Masnoon Duas - مسنون دعاؤں</h2>
-                    <p>Learn the daily supplications (Duas) prescribed by the Prophet Muhammad (PBUH) for various occasions.</p>
-                </div>
-            </div>
-    
-            <!-- Div 8: Six Kalmas -->
-            <div class="custom-div course fade-right">
-                <div class="image-div">
-                    <img src="images/six_kalmas.png" alt="Six Kalmas">
-                </div>
-                <div class="text-div">
-                    <h2>Six Kalmas - شش کلمے</h2>
-                    <p>Memorize and understand the six Kalmas, which are essential declarations of faith in Islam.</p>
-                </div>
-            </div>
-    
-            <!-- Div 9: Tarjma Tafseer -->
-            <div class="custom-div course fade-up">
-                <div class="image-div">
-                    <img src="images/tafseer-of-quran.jpg" alt="Tarjma Tafseer">
-                </div>
-                <div class="text-div">
-                    <h2>Tarjma Tafseer - ترجمہ تفسیر</h2>
-                    <p>Delve deeper into the meanings of the Quranic verses with comprehensive translation and Tafseer.</p>
-                </div>
-            </div>
-    </section>
-
-    <!-- contact -->
-    <section id="contact">
-        <h5 style="text-align: center; align-items: center; ">Contact Me</h5>
-        <div class="container" style="border-bottom: #ffc1078b 1px solid;">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="contact-links">
-                        <a class="nav-link" href="https://wa.me/923407677470" target="_blank">
-                            <i class="fab fa-whatsapp"></i><br>Whatsup
-                        </a>
+            <div class="intro-copy">
+                <span class="eyebrow"><span class="eyebrow-mark"></span> Welcome to Noor Al-Banat</span>
+                <h2>A beautiful beginning to a lifelong connection.</h2>
+                <p class="intro-lead">Every student deserves a gentle, encouraging place to learn. We make essential Islamic knowledge approachable and meaningful, one step at a time.</p>
+                <div class="promise-list">
+                    <div class="promise">
+                        <span class="promise-number">01</span>
+                        <div><h3>Learn with confidence</h3><p>Build a strong foundation through clear, guided lessons.</p></div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="contact-links">
-                        <a href="tel:+923407677470" target="_blank">
-                            <i class="fas fa-phone"></i><br>0340-7677470
-                        </a>
+                    <div class="promise">
+                        <span class="promise-number">02</span>
+                        <div><h3>Grow at your own pace</h3><p>Make steady progress in a supportive learning environment.</p></div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="contact-links">
-                        <a href="mailto:onlinequrantutor56@gmail.com">
-                            <i class="far fa-envelope"></i><br>onlinequrantutor56@gmail.com
-                        </a>
+                    <div class="promise">
+                        <span class="promise-number">03</span>
+                        <div><h3>Put knowledge into practice</h3><p>Carry what you learn into everyday life and worship.</p></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-<!-- Footer -->
-<footer id="footer" class="footer-section">
-    <div class="container1">
-        <div class="row">
-            <div class="col-md-12">
-                <p>&copy; 2024 Online Quran Classes. All Rights Reserved.</p>
+        </section>
+
+        <section class="courses-section" id="courses">
+            <div class="section-wrap">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow"><span class="eyebrow-mark"></span> Find your path</span>
+                        <h2>Knowledge for every <em>step</em>.</h2>
+                    </div>
+                    <p>From your first Arabic letters to deeper Quranic understanding, discover a course to support your journey.</p>
+                </div>
+                <div class="course-grid">
+                    <article class="course-card">
+                        <div class="course-image"><img src="images/recitation.png" alt="Quran recitation course" loading="lazy"><span class="course-count">01</span></div>
+                        <div class="course-copy"><span class="course-category">Quran studies</span><h3>Quran Recitation</h3><p>Practice clear, beautiful recitation with careful pronunciation and rhythm.</p><span class="course-arabic" lang="ar" dir="rtl">تلاوة القرآن</span></div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-image"><img src="images/tajweed.png" alt="Tajweed course" loading="lazy"><span class="course-count">02</span></div>
+                        <div class="course-copy"><span class="course-category">Quran studies</span><h3>Tajweed</h3><p>Understand the rules that bring accuracy and beauty to every recitation.</p><span class="course-arabic" lang="ar" dir="rtl">تجويد</span></div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-image"><img src="images/hifz.png" alt="Quran memorization course" loading="lazy"><span class="course-count">03</span></div>
+                        <div class="course-copy"><span class="course-category">Quran studies</span><h3>Hifz</h3><p>Memorize with a thoughtful plan, regular revision, and steady support.</p><span class="course-arabic" lang="ar" dir="rtl">حفظ القرآن</span></div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-image"><img src="images/namaz.png" alt="Learn how to perform Salah" loading="lazy"><span class="course-count">04</span></div>
+                        <div class="course-copy"><span class="course-category">Everyday worship</span><h3>Complete Namaz</h3><p>Learn the words, movements, and essentials of performing Salah.</p><span class="course-arabic" lang="ar" dir="rtl">صلاة</span></div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-image"><img src="images/hadees.png" alt="Hadith studies course" loading="lazy"><span class="course-count">05</span></div>
+                        <div class="course-copy"><span class="course-category">Islamic studies</span><h3>Ahadees</h3><p>Explore Prophetic teachings and the wisdom they offer for daily life.</p><span class="course-arabic" lang="ar" dir="rtl">الأحاديث</span></div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-image"><img src="images/noorani.png" alt="Noorani Qaida course" loading="lazy"><span class="course-count">06</span></div>
+                        <div class="course-copy"><span class="course-category">Start learning</span><h3>Noorani Qaida</h3><p>Begin with Arabic letters, sounds, and the building blocks of reading.</p><span class="course-arabic" lang="ar" dir="rtl">نوراني قاعدة</span></div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-image"><img src="images/masnoon.png" alt="Masnoon Duas course" loading="lazy"><span class="course-count">07</span></div>
+                        <div class="course-copy"><span class="course-category">Everyday worship</span><h3>Masnoon Duas</h3><p>Learn supplications for daily moments, routines, and occasions.</p><span class="course-arabic" lang="ur" dir="rtl">مسنون دعائیں</span></div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-image"><img src="images/six_kalmas.png" alt="Six Kalmas course" loading="lazy"><span class="course-count">08</span></div>
+                        <div class="course-copy"><span class="course-category">Islamic studies</span><h3>Six Kalmas</h3><p>Memorize the six Kalmas and grow familiar with their meanings.</p><span class="course-arabic" lang="ur" dir="rtl">چھ کلمے</span></div>
+                    </article>
+                    <article class="course-card">
+                        <div class="course-image"><img src="images/tafseer-of-quran.jpg" alt="Quran translation and Tafseer course" loading="lazy"><span class="course-count">09</span></div>
+                        <div class="course-copy"><span class="course-category">Quran studies</span><h3>Translation &amp; Tafseer</h3><p>Explore the meanings and context of Quranic verses with guidance.</p><span class="course-arabic" lang="ur" dir="rtl">ترجمہ و تفسیر</span></div>
+                    </article>
+                </div>
             </div>
-        </div>
-    </div>
-</footer>
+        </section>
 
+        <section class="contact-section" id="contact">
+            <div class="contact-pattern" aria-hidden="true"></div>
+            <div class="contact-content">
+                <span class="eyebrow eyebrow-light"><span class="eyebrow-mark"></span> Your next chapter starts here</span>
+                <h2>Ready to begin your learning journey?</h2>
+                <p>Get in touch to ask a question or find a class that feels right for you.</p>
+                <a class="button button-gold" href="https://wa.me/923407677470" target="_blank" rel="noopener noreferrer">Message us on WhatsApp <span aria-hidden="true">↗</span></a>
+                <div class="contact-details">
+                    <a href="tel:+923407677470"><span class="detail-icon" aria-hidden="true">T</span> +92 340 7677470</a>
+                    <a href="mailto:onlinequrantutor56@gmail.com"><span class="detail-icon" aria-hidden="true">@</span> onlinequrantutor56@gmail.com</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<script>
-    document.onkeydown = function(e) {
-        if(e.keyCode == 123) { // F12 key
-            return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
-            return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { // Ctrl+Shift+C
-            return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Ctrl+Shift+J
-            return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
-            return false;
-        }
-    }
-</script>
-<script>
-    document.addEventListener('contextmenu', event => event.preventDefault());
-</script>
-
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer class="site-footer">
+        <a class="footer-brand" href="#home"><img src="images/logo.png" alt=""> Noor Al-Banat</a>
+        <p>Helping young learners grow through Quran and Islamic knowledge.</p>
+        <span class="copyright">&copy; <span id="current-year">2026</span> Noor Al-Banat. All rights reserved.</span>
+    </footer>
     <script src="./CSS/scripts.js"></script>
 </body>
 </html>

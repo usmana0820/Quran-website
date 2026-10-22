@@ -1,52 +1,39 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const splashImages = [
-        'images/splash 1.jpg',
-        'images/splash 2.jpg',
-        'images/splash 3.jpg',
-        'images/splash 4.jpg',
-        'images/splash 5.jpg',
-        'images/splash 6.jpg',
-        'images/splash 7.jpg',
-        'images/splash 8.jpg',
-        'images/splash 9.jpg',
-        'images/splash 10.jpg',
-        'images/splash 11.jpg',
-        'images/splash 12.jpg',
-        'images/splash 13.jpg',
-        'images/splash 14.jpg',
-        'images/splash 15.jpg'
-    ];
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const year = document.getElementById('current-year');
+    const hero = document.querySelector('.hero');
 
-    let currentImageIndex = 0;
-    const splashScreen = document.getElementById('splash');
-
-    function changeSplashImage() {
-        splashScreen.style.transition = 'background-image 4s ease-in-out'; // Smooth transition
-        splashScreen.style.backgroundImage = `url('${splashImages[currentImageIndex]}')`;
-        currentImageIndex = (currentImageIndex + 1) % splashImages.length;
+    if (year) {
+        year.textContent = new Date().getFullYear();
     }
 
-    // Change splash screen image every 3 seconds
-    setInterval(changeSplashImage, 4000);
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function () {
+            const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!isOpen));
+            menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+            navMenu.classList.toggle('is-open', !isOpen);
+        });
 
-    // Hover effect for splash screen
-    splashScreen.addEventListener('mouseenter', function() {
-        splashScreen.style.transition = 'background-image 5.1s ease-in-out'; // Faster transition on hover
-    });
+        navMenu.addEventListener('click', function (event) {
+            if (event.target.closest('a')) {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open navigation menu');
+                navMenu.classList.remove('is-open');
+            }
+        });
+    }
 
-    splashScreen.addEventListener('mouseenter', function() {
-        splashScreen.style.transition = 'background-image 5s ease-in-out'; // Restore original transition on mouse leave
-    });
+    if (hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const splashImages = Array.from({ length: 15 }, function (_, index) {
+            return 'images/splash ' + (index + 1) + '.jpg';
+        });
+        let currentImageIndex = 14;
 
-    // Close collapsed navbar when clicking outside
-    document.addEventListener('click', function(event) {
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-
-        if (navbarToggler.getAttribute('aria-expanded') === 'true' && !navbarCollapse.contains(event.target) && event.target !== navbarToggler) {
-            navbarToggler.click(); // Simulate click on toggler to close navbar
-        }
-    });
-
+        window.setInterval(function () {
+            currentImageIndex = (currentImageIndex + 1) % splashImages.length;
+            hero.style.backgroundImage = 'url("' + splashImages[currentImageIndex] + '")';
+        }, 8000);
+    }
 });
-
